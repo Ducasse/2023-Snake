@@ -1,3 +1,8 @@
+"
+```
+SnakeController new startScreen
+```
+"
 Class {
 	#name : #SnakeController,
 	#superclass : #Object,
@@ -164,7 +169,7 @@ SnakeController >> handleCollisionWithBorder [
 SnakeController >> handleCollisionWithFood [
 
 	(snake checkCollisionWithFood: food) ifTrue: [
-		food initialize.
+		food setAtRandomPosition.
 		foodElements do: [ :foodElement | game removeChild: foodElement ].
 		foodElements removeAll.
 		foodElements add: (game updateFoodPosition: food position).

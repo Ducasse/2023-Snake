@@ -11,7 +11,7 @@ Class {
 Food >> initialize [
 	"Set the initial position of the food to a random point"
 
-	position := (2 to: 36) atRandom * 20 @ ((4 to: 26) atRandom * 20)
+	self setAtRandomPosition
 ]
 
 { #category : #accessing }
@@ -24,4 +24,11 @@ Food >> position [
 Food >> position: aPosition [
 
 	position := aPosition
+]
+
+{ #category : #initialization }
+Food >> setAtRandomPosition [
+	"Set the initial position of the food to a random point"
+
+	position := (2 to: 36) atRandom * 20 @ ((4 to: 26) atRandom * 20)
 ]
